@@ -1,35 +1,113 @@
+
 window {
-        background-color: rgba (0, 0, 0, 1.0)
+    background-color: rgba(20, 20, 20, 1.0);
 }
 
-/* Outer bar container, takes all the window width/height */
+/* Outer bar container: takes all the window width/height */
 #outer-box {
-	margin: 0px
+    margin: 0px;
 }
 
-/* Inner bar container, surrounds buttons */
+/* Inner bar container: surrounds buttons */
 #inner-box {
-	background-color: rgba (0, 0, 0, 0.85);
-	border-radius: 10px;
-	border-style: none;
-	border-width: 1px;
-	border-color: rgba (156, 142, 122, 0.7);
-	padding: 5px;
-	margin: 5px
+    background: linear-gradient(135deg, rgba(40, 44, 52, 0.9), rgba(30, 30, 30, 0.9));
+    border-radius: 15px;
+    border: 1px solid rgba(60, 60, 60, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin: 5px;
 }
 
+/* Buttons and images */
 button, image {
-	background: none;
-	border: none;
-	box-shadow: none
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
+/* Buttons */
 button {
-	padding-left: 10px;
-	padding-right: 10px;
-	margin: 5px
+    color: rgba(200, 200, 200, 0.9);
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-	background-color: rgba (255, 255, 255, 0.1)
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #61afef; /* Stylish hover effect */
+    transform: scale(1.05); /* Slight enlargement on hover */
 }
+
+/* Image hover effect (for icons) */
+image:hover {
+    filter: brightness(1.2);
+    transform: scale(1.1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Active workspace indicator */
+#active-workspace {
+    background: linear-gradient(135deg, #61afef, #56b6c2);
+    color: #282c34;
+    border-radius: 8px;
+    padding: 5px 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+/* Urgent workspace indicator */
+#urgent-workspace {
+    background: linear-gradient(135deg, #e06c75, #be5046);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 5px 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+/* Tray items */
+#tray {
+    margin: 5px;
+}
+
+#tray > image {
+    margin: 5px;
+    filter: grayscale(0.5);
+    transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+#tray > image:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+/* Clock module */
+#clock {
+    color: #98c379;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* Power buttons */
+#power-buttons button {
+    color: #e5c07b;
+    background: none;
+    border: 1px solid rgba(229, 192, 123, 0.7);
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+#power-buttons button:hover {
+    background: rgba(229, 192, 123, 0.2);
+    color: #282c34;
+    border-color: #e5c07b;
+    transform: scale(1.05);
+}
+
